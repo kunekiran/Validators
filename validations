@@ -1,0 +1,35 @@
+Validator.SafeString=^[.\\p{Alnum}\\p{Space}]{0,1024}$
+Validator.Email=^[A-Za-z0-9._%'-]+@[A-Za-z0-9.-]+\\.[a-zA-Z]{2,4}$
+Validator.IPAddress=^(?\:(?\:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?\:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$
+Validator.URL=^(ht|f)tp(s?)\\\:\\/\\/[0-9a-zA-Z]([-.\\w]*[0-9a-zA-Z])*(\:(0-9)*)*(\\/?)([a-zA-Z0-9\\-\\.\\?\\,\\\:\\'\\/\\\\\\+\=&%\\$\#_]*)?$
+Validator.CreditCard=^(\\d{4}[- ]?){3}\\d{4}$
+Validator.SSN=^(?\!000)([0-6]\\d{2}|7([0-6]\\d|7[012]))([ -]?)(?\!00)\\d\\d\\3(?\!0000)\\d{4}$
+
+#prevent <,>,',=,",?,*
+Validator.Xpath=^[^<|>|'|\=|"|*|?]+$
+
+#prevent $,|,||,;,&&,>,>>,<,-
+Validator.Command=^[^<|>|'|"||*|?|\=]+$
+
+# prevent new line, carriage returns etc \t\r\n\v\f
+Validator.Header=^[^\\t|\\r|\\n|\\v|\\f]+$
+
+#prevent directory traversal
+Validator.UrlPath=^(?\:[\\/a-zA-Z0-9]+(?\:(?\:_|\\-|\\.|%20|\\s)[\\/a-zA-Z0-9]+)*)$
+
+
+Validator.Stamp=^[a-zA-Z0-9_-]*$
+Validator.LoginIdOrName=^[/\\\\/a-zA-Z0-9 _$.@!#"-]*$
+Validator.AlphaNumaric=^[a-zA-Z0-9]*$
+Validator.Numaric=^[0-9]*$
+Validator.Alphabet=^[a-zA-Z]*$
+Validator.Names=^[a-zA-Z0-9 .,'/(/)&_-]*$
+Validator.QuestionAns=^[a-zA-Z0-9 \?$\:;=\!.,'/(/)&_-]*$
+Validator.Date=^[a-zA-Z0-9 /:.,-]*$
+Validator.Address=^[a-zA-Z0-9 \:;.,'/_&\\t\\r\\n\\v\(\)-]*$
+Validator.Description=^[a-zA-Z0-9 \?$#\:;=\!.,'/(/)&_\\t\\r\\n\\v-]*$
+Validator.Key=^[a-zA-Z0-9 _;-]*$
+Validator.ObjectToString=^[a-zA-Z0-9 \:;.,'/_&@=\(\)\\[\\]-]*$
+Validator.LdapDomain=^[a-zA-Z0-9=,]*$
+Validator.LdapFilter=^[a-zA-Z0-9=,\(\)& _$.@!#"-]*$
+Validator.LdapSearchControls=^.*$
